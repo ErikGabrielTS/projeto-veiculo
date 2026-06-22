@@ -1,4 +1,9 @@
-import { calcularIdadeVeiculo } from "./script_calculo.js";
+import {
+  calcularIPVA,
+  calcularIdadeVeiculo,
+  calcularSeguro,
+  calcularValorFinal,
+} from "./script_calculo.js";
 
 const form = document.getElementById("form");
 const divCards = document.getElementById("cards-container");
@@ -43,14 +48,22 @@ const listarCardsVeiculo = (veiculos) => {
       <li><span>Placa</span><strong>${veiculo.placa}</strong></li>
       <li><span>Idade do Veículo</span><strong>${calcularIdadeVeiculo(
         veiculo.ano
+      )} anos</strong></li>
+      <li>
+        <span>Valor do Seguro a Pagar</span><strong>R$ ${calcularSeguro(
+          veiculo.valor
+        )}</strong>
+      </li>
+      <li>
+        <span>Valor do IPVA a Pagar</span><strong>${
+          calcularIPVA(veiculo) === null
+            ? "Isento de IPVA"
+            : `R$ ${calcularIPVA(veiculo)}`
+        }</strong>
+      </li>
+      <li><span>Valor Final</span><strong>R$ ${calcularValorFinal(
+        veiculo
       )}</strong></li>
-      <li>
-        <span>Valor do Seguro a Pagar</span><strong>R$ 2.000,50</strong>
-      </li>
-      <li>
-        <span>Valor do IPVA a Pagar</span><strong>R$ 2.000,50</strong>
-      </li>
-      <li><span>Valor Final</span><strong>R$ 2.000,50</strong></li>
     </ul>
   </div>`;
 
