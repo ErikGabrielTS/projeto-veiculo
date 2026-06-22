@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro de Veículos</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+      integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/style_veiculo.css" />
+    <script type="module" src="js/script_veiculo.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <section id="form-wrapper">
+        <h2>Formulário de Cadastro dos Veículos</h2>
+
+        <form id="form">
+          <div class="container_input">
+            <label>
+              Modelo
+              <input
+                type="text"
+                name="modelo"
+                placeholder="Informe o modelo do veículo"
+                required
+              />
+            </label>
+          </div>
+
+          <div class="container_input">
+            <label>
+              Marca
+              <input
+                type="text"
+                name="marca"
+                placeholder="Informe a marca do veículo"
+                required
+              />
+            </label>
+          </div>
+
+          <div class="container_input">
+            <label>
+              Placa
+              <input
+                type="text"
+                name="placa"
+                placeholder="Informe a placa do veículo"
+                required
+              />
+            </label>
+          </div>
+
+          <div class="container_input">
+            <label>
+              Ano de Fabricação
+              <input
+                type="number"
+                name="ano"
+                placeholder="Informe o ano de fabricação do veículo"
+                required
+              />
+            </label>
+          </div>
+
+          <div class="container_input">
+            <label>
+              Valor de Mercado
+              <input
+                type="number"
+                name="valor"
+                placeholder="Informe o valor de mercado do veículo"
+                required
+              />
+            </label>
+          </div>
+
+          <div class="container_input">
+            <fieldset>
+              <legend>Selecione o Tipo de Combustível</legend>
+
+              <div>
+                <label
+                  >Gasolina<input
+                    type="radio"
+                    name="combustivel"
+                    value="gasolina"
+                    checked
+                /></label>
+              </div>
+
+              <div>
+                <label
+                  >Etanol <input type="radio" name="combustivel" value="etanol"
+                /></label>
+              </div>
+
+              <div>
+                <label
+                  >Biocombustível<input
+                    type="radio"
+                    name="combustivel"
+                    value="bio"
+                /></label>
+              </div>
+
+              <div>
+                <label
+                  >Híbrido<input
+                    type="radio"
+                    name="combustivel"
+                    value="hibrido"
+                /></label>
+              </div>
+
+              <div>
+                <label
+                  >Elétrico<input
+                    type="radio"
+                    name="combustivel"
+                    value="eletrico"
+                /></label>
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="btns">
+            <button type="submit" class="btn">Cadastrar</button>
+            <button type="reset" class="btn">Limpar</button>
+          </div>
+        </form>
+      </section>
+
+      <section id="cards-wrapper">
+        <h2>Veículos Cadastrados</h2>
+
+        <p>Ainda não há veículos cadastrados.</p>
+      </section>
+    </main>
+  </body>
+</html>
