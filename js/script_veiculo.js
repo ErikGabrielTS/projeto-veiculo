@@ -46,6 +46,7 @@ const listarCardsVeiculo = (veiculos) => {
     <ul>
       <li><span>Marca</span><strong>${veiculo.marca}</strong></li>
       <li><span>Placa</span><strong>${veiculo.placa}</strong></li>
+      <li><span>Ano</span><strong>${veiculo.ano}</strong></li>
       <li><span>Idade do Veículo</span><strong>${calcularIdadeVeiculo(
         veiculo.ano
       )} anos</strong></li>
