@@ -52,18 +52,20 @@ const listarCardsVeiculo = (veiculos) => {
       <li>
         <span>Valor do Seguro a Pagar</span><strong>R$ ${calcularSeguro(
           veiculo.valor
-        )}</strong>
+        )
+          .toFixed(2)
+          .replace(".", ",")}</strong>
       </li>
       <li>
         <span>Valor do IPVA a Pagar</span><strong>${
           calcularIPVA(veiculo) === null
             ? "Isento de IPVA"
-            : `R$ ${calcularIPVA(veiculo)}`
+            : `R$ ${calcularIPVA(veiculo).toFixed(2).replace(".", ",")}`
         }</strong>
       </li>
-      <li><span>Valor Final</span><strong>R$ ${calcularValorFinal(
-        veiculo
-      )}</strong></li>
+      <li><span>Valor Final</span><strong>R$ ${calcularValorFinal(veiculo)
+        .toFixed(2)
+        .replace(".", ",")}</strong></li>
     </ul>
   </div>`;
 
