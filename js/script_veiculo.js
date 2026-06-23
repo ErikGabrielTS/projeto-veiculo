@@ -24,12 +24,16 @@ form.addEventListener("submit", (evt) => {
     combustivel: formData.get("combustivel"),
   };
 
-  veiculosList.push(veiculo);
+  adicionarVeiculo(veiculo);
 
   listarCardsVeiculo(veiculosList);
 
   form.reset();
 });
+
+const adicionarVeiculo = (veiculo) => {
+  veiculosList.push(veiculo);
+};
 
 const listarCardsVeiculo = (veiculos) => {
   if (veiculos.length === 0) {
